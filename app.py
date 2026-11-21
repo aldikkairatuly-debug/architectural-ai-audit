@@ -107,11 +107,11 @@ with st.sidebar:
     st.divider()
     st.markdown(
         "**Команда:** ArchiTech (АЖиОЗ 25-14)\n\n"
-        "**Модель:** `gemini-2.5-flash` (Vision)\n\n"
+        "**Модель:** `gemini-3.8-flash` (Vision)\n\n"
         "**Назначение:** экспресс-проверка планировок и ручных эскизов на эргономику и нормы (СНиП / СП РК)."
         if lang == "Русский"
         else "**Команда:** ArchiTech (АЖиОЗ 25-14)\n\n"
-        "**Модель:** `gemini-2.5-flash` (Vision)\n\n"
+        "**Модель:** `gemini-3.8-flash` (Vision)\n\n"
         "**Мақсаты:** жоспарлаулар мен қолмен сызылған эскиздерді эргономика мен құрылыс нормаларына (ҚНжЕ / ҚР ЕЖ) жылдам тексеру."
     )
 
@@ -260,7 +260,7 @@ with col_right:
                     )
 
                     response = client.models.generate_content(
-                        model="gemini-2.5-flash", contents=[image, prompt]
+                        model="gemini-3.8-flash", contents=[image, prompt]
                     )
 
                     st.session_state["audit_result"] = response.text
